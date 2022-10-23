@@ -1,0 +1,31 @@
+import java.util.*;
+public class Insertion
+{
+    public static void main()
+    {
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter Number of Numbers!");
+        int n = in.nextInt();
+        System.out.println("Enter the Numbers!");
+        int m[] = new int[n+1];
+        for(int i=0; i<n; i++)
+        {
+            m[i] = in.nextInt();
+        }
+        System.out.println("Enter Your Intersting Number!");
+        int no = in.nextInt();
+        System.out.println("Enter the Position!");
+        int p = in.nextInt();
+        for(int j=n-1; j>=p; j--)
+        {
+            m[j+1] = m[j];
+        }
+        m[p] = no;
+        n++;
+        System.out.println("The Array of Numbers is -");
+        for(int l=0; l<n; l++)
+        {
+            System.out.println(m[l]);
+        }
+    }
+}
