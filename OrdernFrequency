@@ -1,0 +1,66 @@
+import java.util.*;
+class OrdernFrequency
+{
+    public static void main()
+    {
+        Scanner in = new Scanner (System.in);
+        System.out.println("Enter Your String!");
+        String s = in.nextLine(); 
+        String st = s.trim(); 
+        int p = st.length(), x=0;
+        char m[] = new char[p];
+        char chr[]= new char[p];
+        char ch, t; 
+        int j=0, min;
+        String str="";
+        for(int i=0; i<p; i++)
+        {
+            ch = st.charAt(i);
+            if(Character.isWhitespace(ch))
+            {
+                continue;
+            }
+            else
+            {
+                m[j] = ch;
+                j++;
+            }
+        }
+        for(int i=0; i<p-1; i++)
+        {
+            min = i;
+            for(j=i+1; j<p; j++)
+            {
+                if(m[j] < m[min])
+                {
+                    min = j;
+                }
+                t = m[i];
+                m[i] = m[min];
+                m[min] = t;
+            }
+             System.out.println(m[i]);
+        }
+        for(int i=0;i<p;i++)
+        {
+            if(m[i]=='\0')
+            {
+                continue;
+            }
+            int count=1;
+            for(j=i+1;j<p;j++)
+            {
+                if((m[i]!='\0' && m[j]!='\0') && (m[i]==m[j]))
+                {
+                    count++;
+                    m[j]='\0';
+                }
+                else
+                {
+                    continue;
+                }
+            }
+            System.out.println(m[i]+"->"+count);
+        }
+    }
+}
