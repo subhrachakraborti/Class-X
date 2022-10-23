@@ -1,0 +1,19 @@
+import java.util.*;
+public class Replace_Word
+{
+    public static void main()
+    {
+        Scanner in = new Scanner (System.in);
+        System.out.println("Enter Your String!");
+        String st = in.nextLine();
+        System.out.println("Enter the Word To Replace!");
+        String wo = in.next();
+        System.out.println("Enter the Replacing Word!");
+        String wr = in.next();
+        System.out.println("Your Required String ⬇");
+        int p = wo.length();
+        int n = st.indexOf(wo);
+        String s = st.substring(0, n) + wr + st.substring(n + p);
+        System.out.print(s);
+    }
+}
