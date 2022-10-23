@@ -1,0 +1,31 @@
+import java.util.*;
+public class CountryNameWithVowel
+{
+    public static void main()
+    {
+        Scanner in = new Scanner (System.in);
+        String m1[] = new String[10];
+        String m2[] = new String[10];
+        String n = ""; char ch;
+        for(int i=0; i<10; i++)
+        {
+            System.out.println("Enter Country "+(i+1));
+            m1[i] = in.next();
+            System.out.println("Enter Capital "+(i+1));
+            m2[i] = in.next();
+        }
+        System.out.println("Output : ");
+        System.out.println("Country\t\tCapital");
+        for(int i=0; i<10; i++)
+            {
+            n = m1[i];
+            ch = Character.toUpperCase(n.charAt(0));
+            if(ch == 'A' ||
+                ch == 'E' ||
+                ch == 'I' ||
+                ch == 'O' ||
+                ch == 'U')
+               System.out.println(m1[i]+"\t\t"+m2[i]); 
+            }
+        }
+    }
