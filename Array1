@@ -1,0 +1,20 @@
+import java.util.*;
+class Array1
+{
+    public static void main()
+    {
+        Scanner in = new Scanner (System.in);
+        int i;
+        String m[]=new String[5];
+        for(i=0;i<5;i++)
+        {
+            System.out.print("Enter Your Name!");
+            m[i]=in.nextLine();
+        }
+        System.out.println("The Names In The Cell Are :");
+        for(i=0;i<5;i++)
+        {
+            System.out.println(m[i]);
+        }
+    }
+}
