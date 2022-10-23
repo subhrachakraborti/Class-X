@@ -1,0 +1,28 @@
+import java.util.*;
+class Deletion
+{
+    public static void main()
+    {
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter Number of Numbers!");
+        int n = in.nextInt();
+        System.out.println("Enter the Numbers!");
+        int m[] = new int[n+1];
+        for(int i=0; i<n; i++)
+        {
+            m[i] = in.nextInt();
+        }
+        System.out.println("Enter The Postion To Delete!");
+        int p = in.nextInt();
+        for(int i=p+1; i<n; i++)
+        {
+            m[i-1] = m[i];
+        }
+        n--;
+        System.out.println("The Final Array!");
+        for(int i=0; i<n; i++)
+        {
+            System.out.println(m[i]);
+        }
+    }
+}
