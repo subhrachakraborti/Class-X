@@ -1,0 +1,20 @@
+import java.util.*;
+class Array2
+{
+    public static void main()
+    {
+        Scanner in = new Scanner (System.in);
+         int i,temp=0;
+        int m[]=new int[5];
+        for(i=0;i<5;i++)
+        {
+            System.out.print("Enter Your Number!");
+            m[i]=in.nextInt();
+        }
+        for(i=0;i<5;i++)
+        {
+            temp=temp+m[i];
+        }
+        System.out.println("Ans = "+temp);
+    }
+}
