@@ -1,0 +1,39 @@
+import java.util.*;
+class Merging
+{
+    public static void main()
+    {
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter Number of Numbers in Array 1!");
+        int n = in.nextInt();
+        System.out.println("Enter Number of Numbers in Array 2!");
+        int n1 = in.nextInt();
+        int n2 = n+n1;
+        int m[] = new int[n];
+        int m1[] = new int[n1];
+        int m2[] = new int[n2];
+        System.out.println("Enter the Numbers in Array 1!");
+        for(int i=0; i<n; i++)
+        {
+            m[i] = in.nextInt();
+        }
+        System.out.println("Enter the Numbers in Array 2!");
+        for(int i=0; i<n; i++)
+        {
+            m1[i] = in.nextInt();
+        }
+        for(int i=0; i<n; i++)
+        {
+            m2[i] = m[i];
+        }
+        for(int i=0; i<n1; i++)
+        {
+            m2[n+i] = m1[i];
+        }
+        System.out.println("The Output :");
+        for(int i=0; i<n2; i++)
+        {
+            System.out.println(m2[i]);
+        }
+    }
+}
