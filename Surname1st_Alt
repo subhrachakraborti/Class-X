@@ -1,0 +1,18 @@
+import java.util.*;
+class Surname1st_Alt
+{
+    public static void main()
+    {
+        Scanner in = new Scanner (System.in);
+        System.out.println("Enter Your Name!");
+        String st = in.nextLine();
+        int p = st.length();
+        char ch; int x=0, n=0;
+        for(int j=p-1; j>=0; j--)
+        {
+            ch = st.charAt(j);
+            x = st.indexOf(' ',2);
+        }
+        System.out.println(st.substring(x+1,p)+" "+st.substring(0,x));
+    }
+}
