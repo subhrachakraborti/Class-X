@@ -1,0 +1,42 @@
+import java.util.*;
+class Happy_Word
+{
+    public static void main()
+    {
+        Scanner in = new Scanner (System.in);
+        System.out.println("Enter a word!");
+        String st = in.next(), st1="";
+        int p = st.length(), n, x=0;
+        char ch;
+        int temp = 1;
+        for(int i=0; i<p; i++)
+        {
+            ch = Character.toUpperCase(st.charAt(i));
+            n = ((int)(ch)) - 64;
+            System.out.println(n);
+            st1 = st1 + Integer.valueOf(n);
+        }
+        System.out.println(st1);
+    
+        long num = Long.valueOf(st1);
+        long sum = 0;
+        long a = num;
+        do {
+            sum = 0;
+            while (a != 0) 
+            {
+                int d = (int)(a % 10);
+                sum += d * d;
+                a /= 10;
+            }
+            a = sum;
+        } while (sum > 9);
+
+        if (sum == 1) {
+            System.out.println(num + " is a Happy Word!");
+        }
+        else {
+            System.out.println(num + " is not a Happy Word!");
+        }
+    }
+}
