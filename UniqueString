@@ -1,0 +1,28 @@
+import java.util.*;
+public class UniqueString
+{
+    public static void main()
+    {
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter Your Word!");
+        String st = in.next();
+        int p = st.length();
+        int flag = 1;
+        for(int i=0; i<p; i++)
+        {
+            for(int j=i+1; j<p; j++)
+            {
+                if(st.charAt(i) == st.charAt(j))
+                flag = 0;
+            }
+        }
+        if(flag == 1)
+        {
+            System.out.println("It is a Unique String!");
+        }
+        else
+        {
+            System.out.println(st+" is not a Unique String!");
+        }
+    }
+}
