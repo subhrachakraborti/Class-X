@@ -1,0 +1,28 @@
+import java.util.*;
+class TwoSumsArray
+{
+    public static void main()
+    {
+        Scanner in = new Scanner (System.in);
+        System.out.println("Enter No. of No.s");
+        int n = in.nextInt();
+        int m[]=new int[n];
+        System.out.println("Enter Your Numbers!");
+        for(int i=0; i<n; i++)
+        {
+            m[i] = in.nextInt();
+        }
+        System.out.println("Enter User Targeted No.");
+        int tar = in.nextInt();
+        for(int j=0; j<n; j++)
+        {
+            for(int k=j+1; k<n; k++)
+            {
+                if((m[j]+m[k])==tar)
+                {
+                    System.out.println("The required index numbers are : "+j+" and "+k);
+                }
+            }
+        }
+    }
+}
