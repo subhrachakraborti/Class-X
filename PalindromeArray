@@ -1,0 +1,37 @@
+import java.util.*;
+class Palindrome_Array
+{
+    public static void main()
+    {
+        Scanner in = new Scanner (System.in);
+        System.out.println("Enter No. of Words!");
+        int n = in.nextInt();
+        String m[]=new String[n];
+        String s="";
+        System.out.println("Enter Your Words!");
+        for(int i=0; i<n; i++)
+        {
+            m[i] = in.next();
+        }
+        for(int j=0; j<n; j++)
+        {
+            s = m[j].toUpperCase();
+            int len=s.length();
+            boolean isPalin=true;
+            for(int k=0;k<len/2;k++)
+            {
+                 if(s.charAt(k) != s.charAt(len-1-k))
+                 {
+                     isPalin= false;
+                     break;
+                 }
+            }
+            if(isPalin)
+            {
+                System.out.println(m[j]);
+            }
+            
+        }
+        
+    }
+}
