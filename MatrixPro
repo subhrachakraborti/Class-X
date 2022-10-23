@@ -1,0 +1,42 @@
+import java.util.Scanner;
+public class MatrixPro
+{
+    public static void main()
+    {
+        Scanner in = new Scanner (System.in);
+        int i, j;
+        int m[][] = new int[3][4];
+        int n[][] = new int[4][3];
+        int o[][] = new int[3][3];
+        System.out.println("Enter the terms of 1st matrix!");
+        for(i=0; i<3; i++)
+        {
+            for(j=0; j<4; j++)
+            {
+                m[i][j] = in.nextInt();
+            }
+        }
+        System.out.println("Enter the terms of 2nd matrix!");
+        for(i=0; i<4; i++)
+        {
+            for(j=0; j<3; j++)
+            {
+                n[i][j] = in.nextInt();
+            }
+        }
+        for(i=0; i<3; i++)
+        {
+            for(j=0; j<3; j++)
+            {
+                o[i][j] = m[i][j] * n[i][j];
+            }
+        }
+        for(i=0; i<3; i++)
+        {
+            for(j=0; j<3; j++)
+            {
+                System.out.println(o[i][j]);
+            }
+        }
+    }
+}
