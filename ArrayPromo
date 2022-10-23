@@ -1,0 +1,39 @@
+import java.util.*;
+public class ArrayPromo
+{
+    public static void main()
+    {
+        Scanner in = new Scanner (System.in);
+        System.out.println("Enter the number of students!");
+        int n = in.nextInt();
+        int roll[] = new int[n];
+        int eng[] = new int[n];
+        int phy[] = new int[n];
+        int chem[] = new int[n];
+        int bio[] = new int[n];
+        int sci[] = new int[n];
+        for(int i=0; i<n; i++)
+        {
+            System.out.println("Enter Roll of Student:"+(i+1));
+            roll[i] = in.nextInt();
+            System.out.println("Enter English Marks of Student:"+(i+1));
+            eng[i] = in.nextInt();
+            System.out.println("Enter Physics Marks of Student:"+(i+1));
+            phy[i] = in.nextInt();
+            System.out.println("Enter Chemistry Marks of Student:"+(i+1));
+            chem[i] = in.nextInt();
+            System.out.println("Enter Biology Marks of Student:"+(i+1));
+            bio[i] = in.nextInt();
+            sci[i] = bio[i] + phy[i] + chem[i];
+        }
+        for(int i=0; i<n; i++)
+        {
+            if(sci[i] >=70 && eng[i] >=35)
+            {
+                System.out.println("Roll :"+roll[i]+"'s PROMOTION IS GRANTED!!!");
+            }
+            else
+            System.out.println("Roll :"+roll[i]+"'s PROMOTION IS NOT GRANTED!!!");
+        }
+    }
+}
