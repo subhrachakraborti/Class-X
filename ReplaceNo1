@@ -1,0 +1,22 @@
+import java.util.*;
+public class ReplaceNo1
+{
+    public static void main()
+    {
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter Your Word!");
+        String st = in.next();
+        int p = st.length();
+        String neu = "";
+        for(int i=0; i<p; i++)
+        {
+            char ch = st.charAt(i);
+            int a = (int)(ch);
+            a++;
+            ch = (char)(a);
+            neu = neu + ch;
+            a=0;
+        }
+        System.out.println("Your Replaced Word = "+neu);
+    }
+}
