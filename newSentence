@@ -1,0 +1,47 @@
+import java.util.*;
+class newSentence
+{
+    public static void main()
+    {
+        Scanner in = new Scanner (System.in);
+        System.out.println("Enter Your String!");
+        String st = in.nextLine();
+        int p = st.length(); String neu = ""; char ch, chr;
+        System.out.println("Output : ");
+        for(int i=0; i<p; i++)
+        {
+            ch = Character.toUpperCase(st.charAt(i));
+            if(ch == 'A' ||
+               ch == 'E' ||
+               ch == 'I' ||
+               ch == 'O' ||
+               ch == 'U')
+               {
+                   neu = neu + ch;
+                   continue;
+               }
+            chr = (char)((int)(ch)-1);
+            if(chr == 'A' ||
+               chr == 'E' ||
+               chr == 'I' ||
+               chr == 'O' ||
+               chr == 'U')
+               {
+                   neu = neu + (char)((int)(ch)+1);
+                   continue;
+               }
+            if(chr != 'A' ||
+               chr != 'E' ||
+               chr != 'I' ||
+               chr != 'O' ||
+               chr != 'U')
+                {
+                    neu = neu + chr;
+                    continue;
+                }
+            else
+            neu = neu + ch;
+        }
+        System.out.println(neu);
+    }
+}
