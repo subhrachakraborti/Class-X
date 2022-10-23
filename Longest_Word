@@ -1,0 +1,31 @@
+import java.util.*;
+public class Longest_Word
+{
+    public static void main(String args[])
+    {
+        Scanner in = new Scanner (System.in);
+        System.out.println("Enter the Sentence!");
+        String st = in.nextLine(); st += " ";
+        int p = st.length(); char ch;
+        String word="", nword=""; int x=0;
+        for(int i=0; i<p; i++)
+        {
+            ch = st.charAt(i);
+            if(Character.isWhitespace(ch))
+            {
+                if(word.length() > nword.length())
+                {
+                    nword = word;
+                    x = word.length();
+                }
+                word = "";
+            }
+            else
+            {
+                word += ch;
+            }
+        }
+        System.out.println("Longest Word = "+nword);
+        System.out.println(nword+"'s Length = "+x);
+    }
+}
