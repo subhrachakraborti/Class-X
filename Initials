@@ -1,0 +1,24 @@
+import java.util.*;
+class Initials
+{
+    public static void main()
+    {
+        Scanner in = new Scanner (System.in);
+        System.out.println("Enter Your Name!");
+        String s = in.nextLine();
+        String st = " "+s;
+        int p = st.length(); char ch;
+        for(int i=0; i<p; i++)
+        {
+            ch = st.charAt(i);
+            if(Character.isWhitespace(ch))
+            {
+                System.out.print(st.charAt(i+1)+" ");
+            }
+            else
+            {
+                continue;
+            }
+        }
+    }
+}
