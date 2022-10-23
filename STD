@@ -1,0 +1,47 @@
+import java.util.*;
+public class STD
+{
+    public static void main()
+    {
+        Scanner in = new Scanner (System.in);
+        int x = 10;
+        int flag = 0;
+        String m[] = new String[x];
+        String n[] = new String[x];
+        String y="";
+        for(int i=0; i<x; i++)
+        {
+            System.out.print("Enter the City : ");
+            m[i] = in.next();
+        }
+        for(int i=0; i<x; i++)
+        {
+            System.out.print("Enter the STD code : ");
+            n[i] = in.next();
+        }
+        System.out.println("Enter A City To Search!");
+        String ct = in.next();
+        for(int j=0; j<x; j++)
+        {
+            if(ct.equals(m[j]))
+            {
+                y = n[j];
+                flag = 1;
+                break;
+            }
+            else
+            {
+                flag = 0;
+            }
+        }
+        if(flag == 1)
+        {
+            System.out.println("Search Successful.");
+            System.out.println("The STD code is : "+y);
+        }
+        else
+        {
+            System.out.println("Search unsuccessful, no such city in the list.");
+        }
+    }
+}
