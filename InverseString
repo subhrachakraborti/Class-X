@@ -1,0 +1,30 @@
+import java.util.*;
+public class InverseString
+{
+    public static void main()
+    {
+        Scanner in = new Scanner (System.in);
+        int p, i, j;
+        String st, sr="", word="", nword="";
+        System.out.println("Enter A Sentence!");
+        st = in.nextLine(); st+=" ";
+        p = st.length();
+        InverseString ob = new InverseString();
+        StringBuffer sc = new StringBuffer();
+        for(i=0; i<p; i++)
+        {
+            if(Character.isWhitespace(st.charAt(i)))
+            {
+                nword = word;
+                sr = sr + " " + nword;
+                nword = ""; word = "";
+            }
+            else
+            {
+                word = st.charAt(i) + word;
+            }
+        }
+        System.out.print("Your String : ");
+        System.out.println(sr);
+    }
+}
