@@ -1,0 +1,18 @@
+import java.util.*;
+class Sunny_Number
+{
+    public static void main()
+    {
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter Your No. 'n'!");
+        int n = in.nextInt();
+        int m = n+1;
+        int o = (int)(Math.sqrt(m));
+        System.out.println("The Numbers Are :");
+        for(int i=2; i<o; i++)
+        {
+            int p = (int)(Math.pow(i,2)) - 1;
+            System.out.println(p);
+        }
+    }
+}
