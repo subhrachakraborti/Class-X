@@ -1,0 +1,42 @@
+import java.util.*;
+class BCeV
+{
+    public static void main()
+    {
+        Scanner in = new Scanner (System.in);
+        int x = 10;
+        String m[] = new String[x];
+        System.out.println("Enter the Cities!");
+        char ch, ch1;
+        String st, s = "";
+        int p, flag=0;
+        for(int i=0; i<x; i++)
+        {
+            m[i] = in.next();
+        }
+        for(int i=0; i<x; i++)
+        {
+            st = m[i];
+            p = st.length();
+            for(int j=0; j<p; j++)
+            {
+                ch = Character.toUpperCase(st.charAt(i));
+                ch1 = Character.toUpperCase(st.charAt(p-1));
+                if((ch != 'A' || ch != 'E' || ch != 'I' || ch != 'O' ||
+                ch != 'U') && (ch1 == 'A' || ch1 == 'E' || ch1 == 'I' 
+                || ch1 == 'O' || ch1 == 'U'))
+                {
+                    s = m[i];
+                    flag = 1;
+                }
+                else
+                {
+                    flag = 0;
+                    break;
+                }
+            }
+            if(flag == 1)
+            System.out.println(s);
+        }
+    }
+}
