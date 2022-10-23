@@ -1,0 +1,37 @@
+import java.util.*;
+class password_checker
+{
+    public static void main()
+    {
+        Scanner in = new Scanner (System.in);
+        System.out.println("Enter Your Password!");
+        String st = in.next();
+        int n = st.length();
+        int a=0, b=0, c=0, d=0; char ch; boolean p, q, r;
+        for(int i=1; i<n; i++)
+        {
+                ch = st.charAt(i);
+                p = Character.isDigit(ch);
+                q = Character.isLetter(ch);
+                r = Character.isUpperCase(ch);
+                if(p==true)
+                a++;
+                if(q==true)
+                b++;
+                if(r==true)
+                c++;
+                if(ch=='@' || ch=='$')
+                d++;
+                if(ch=='#' || ch =='.')
+                d++;
+                continue;
+        }
+        if(a>=1 && b>=1 && c>=1 && d>=1 && n>=8)
+        System.out.println("Password is Strong!");
+        else
+        {
+            System.out.println("Password is Weak!");
+            System.out.println("A password is strong when there is a Upper Case, a Lower Case, a Digit and a Special Character(@ or $ or # or .) and must contains atleast 8 characters.");
+        }
+    }
+}
