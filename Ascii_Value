@@ -1,0 +1,19 @@
+import java.util.*;
+public class Ascii_Value
+{
+    public static void main()
+    {
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter Your String!");
+        String st = in.next();
+        int p = st.length();
+        char ch;
+        int a;
+        for(int i=0; i<p; i++)
+        {
+            ch = st.charAt(i);
+            a = (int)(ch);
+            System.out.println("ASCII of "+ch+" is "+a);
+        }
+    }
+}
