@@ -1,0 +1,40 @@
+import java.util.*;
+public class Binary_Record
+{
+    public static void main()
+    {
+        Scanner in = new Scanner (System.in);
+        System.out.println("Enter Number of Years!");
+        int n = in.nextInt();
+        System.out.println("Enter an Array in Ascending form!");
+        int m[] = new int[n];
+        for(int i=0; i<n; i++)
+        {
+            m[i] = in.nextInt();
+        }
+        System.out.println("Enter Year for search!");
+        int sc = in.nextInt();
+        int mid, f=0, l=n, c=0;
+        for(int i=0; i<n; i++)
+        {
+            mid = (int)((f+l)/2);
+            if(m[mid] == sc)
+            {
+                c=1; 
+                break;
+            }
+            if(m[mid] < sc)
+            {
+                f = mid + 1;
+            }
+            if(m[mid] > sc)
+            {
+                l = mid - 1;
+            }
+        }
+        if(c == 1)
+        System.out.println("Record Exists!");
+        else
+        System.out.println("Record Does Not Exit!");
+    }
+}
