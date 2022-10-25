@@ -1,0 +1,19 @@
+import java.util.Scanner;
+class ASCII_rev
+{
+    public static void main()
+    {
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter Your Character");
+        char ch = in.next().charAt(0);
+        int x = (int)(ch);
+        int rev = 0, d;
+        while(x>0)
+        {
+            d = x % 10;
+            rev = rev*10 + d;
+            x = x / 10;
+        }
+        System.out.println("Required Character = "+((char)(rev)));
+    }
+}
