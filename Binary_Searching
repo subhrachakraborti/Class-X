@@ -1,0 +1,44 @@
+import java.util.*;
+class binary_searching
+{
+    public static void main()
+    {
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter No. Of Chars");
+        int n = in.nextInt();
+        int m[]=new int[n];
+        for(int i = 0; i < n; i++)
+        {
+            System.out.print("Enter The No.s");
+            m[i]=in.nextInt();
+        }
+        int first=0, last=n, mid, temp, flag=0;
+        System.out.println("Enter A Number To Search");
+        temp=in.nextInt();
+        while(first<=last)
+        {
+            mid = (int)((first + last)/2);
+            if(m[mid] == temp)
+            {
+                flag = 1;
+                break;
+            }
+            else if(m[mid] < temp)
+            {
+                first = mid + 1;
+            }
+            else if(m[mid] > temp)
+            {
+                last = mid - 1;
+            }
+        }
+        if(flag == 0)
+        {
+            System.out.println("Unsucessful Search! Try Again!");
+        }
+        else
+        {
+            System.out.println("Sucessful Search! Voila!");
+        }
+    }
+}
