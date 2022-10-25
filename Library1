@@ -1,0 +1,22 @@
+import java.util.*;
+class Library1
+{
+    public static void main()
+    {
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter The Characters");
+        char a = in.next().charAt(0);
+        char b = in.next().charAt(0);
+        int x = (int)(a);
+        int y = (int)(b);
+        int d = x - y; String st="";
+        if(d == 0)
+        st="Both the characters are same!";
+        if(d > 0)
+        st="Second character is smaller!";
+        if(d < 0)
+        st="First character is smaller!";
+        System.out.println("d = "+d);
+        System.out.println(st);
+    }
+}
