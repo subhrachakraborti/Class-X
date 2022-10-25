@@ -1,0 +1,36 @@
+import java.util.*;
+class NameSort
+{
+    public static void main()
+    {
+        Scanner in = new Scanner (System.in);
+        System.out.println("Enter No. of Names!");
+        int n = in.nextInt();
+        String m[] = new String[n];
+        String str, stri;
+        System.out.println("Enter the Names!");
+        for(int i=0; i<n; i++)
+        {
+            m[i] = in.next();
+        }
+        String temp="";
+        for(int i=0; i<n-1; i++)
+        {
+            for(int j=0; j<n-i-1; j++)
+            {
+                str = m[j];
+                stri = m[j+1];
+                if(str.compareTo(stri) >= 1)
+                {
+                    temp = m[j];
+                    m[j] = m[j+1];
+                    m[j+1] = temp;
+                }
+            }
+        }
+        for(int i=0; i<n; i++)
+        {
+            System.out.print(m[i]+", ");
+        }
+    }
+}
