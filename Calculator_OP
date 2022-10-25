@@ -1,0 +1,43 @@
+/**
+ * By Sayan Das
+ * Date     : 30.07.2022
+ * Time     : 1711 Hours (IST)
+ * Phone No.: +91 86972 76108
+ */
+import java.util.*;
+public class Calculator_OP
+{
+    public static void main (String args[])
+    {
+        Scanner sc= new Scanner (System.in);
+        System.out.println("Enter a mathematical equation");
+        String str= sc.nextLine();
+        String st1=" ", st2=" ";
+        int l= str.length();
+        int i, n1, n2, v1, v2;
+        char ch, symbol=' ';
+        for (i=0; i<l; i++)
+        {
+            ch= str.charAt(i);
+            if (ch=='+' || ch=='-' || ch=='*' || ch=='/' || ch=='%')
+            {   
+                st1= str.substring(0,i);  
+                st2= str.substring((i+1),l);
+                symbol= ch;
+                break;
+            }
+        }
+        v1= Integer.valueOf(st1);
+        v2= Integer.valueOf(st2);
+        if (symbol=='+')
+            System.out.println("Sum= "+(v1+v2));
+        if (symbol=='-')
+            System.out.println("Diffenence= "+(v1-v2));
+        if (symbol=='*')
+            System.out.println("Product= "+(v1*v2));
+        if (symbol=='/')
+            System.out.println("Quotient= "+(v1/v2));
+        if (symbol=='%')
+            System.out.println("Remainder= "+(v1%v2));
+    }
+}
