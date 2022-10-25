@@ -1,0 +1,19 @@
+import java.util.*;
+class User_Pattern
+{
+    public static void main()
+    {
+        Scanner in = new Scanner (System.in);
+        System.out.println("Enter Your Word!");
+        String st = in.next();
+        int p = st.length();
+        for(int i=0; i<p; i++)
+        {
+            for(int j=0; j<i+1; j++)
+            {
+                System.out.print(st.charAt(i)+" ");
+            }
+            System.out.println();
+        }
+    }
+}
