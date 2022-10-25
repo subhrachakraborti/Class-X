@@ -1,0 +1,19 @@
+import java.util.Scanner;
+public class MatrixSum
+{
+    public static void main()
+    {
+        Scanner in = new Scanner (System.in);
+        int a,b,c,d;
+        int e,f,g,h;
+        int i,j,k,l;
+        System.out.println("Enter the terms of first matrix!");
+        a = in.nextInt(); b = in.nextInt(); c = in.nextInt(); d = in.nextInt();
+        System.out.println("Enter the terms of second matrix!");
+        e = in.nextInt(); f = in.nextInt(); g = in.nextInt(); h = in.nextInt();
+        i = a+e; j = b+f; k = c+g; l = d+h;
+        System.out.println("The Sum Is :");
+        System.out.println(i+"\t\t"+j);
+        System.out.println(k+"\t\t"+l);
+    }
+}
