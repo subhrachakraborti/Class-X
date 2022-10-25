@@ -1,0 +1,21 @@
+public class MatrixDiagoanlSum
+{
+    public static void main()
+    {
+        int m[][] = {{12,21,13,14},
+                     {24,41,51,33},
+                     {61,11,30,29},
+                     {59,82,41,76}};
+        long sum1, sum2=0;
+        sum1 = m[0][0] + m[1][1] + m[2][2] + m[3][3];
+        int j = 3;
+        for(int i=0; i<4; i++)
+        {
+            sum2+=m[i][j];
+            j-=1;
+        }
+        //sum2 = m[0][3] + m[1][2] + m[2][1] + m[3][0];
+        System.out.println("Sum of Left Diagonal = "+sum1);
+        System.out.println("Sum of Right Diagonal = "+sum2);
+    }
+}
