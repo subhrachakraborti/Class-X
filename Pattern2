@@ -1,0 +1,22 @@
+import java.util.*;
+class Pattern2
+{
+    public static void main()
+    {
+        Scanner in = new Scanner (System.in);
+        int a = 90;
+        for(int i=5; i>=1; i--)
+        {
+            for(int j=1; j<=i; j++)
+            {
+                char ch = (char)(a);
+                System.out.print(ch);
+                if(j == i)
+                a = 90;
+                else
+                a = a - 1;
+            }
+            System.out.println();
+        }
+    }
+}
