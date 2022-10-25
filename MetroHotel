@@ -1,0 +1,16 @@
+import java.util.*;
+public class MetroHotel
+{
+    public static void main()
+    {
+        Scanner in = new Scanner (System.in);
+        System.out.println("Enter The Name!");
+        String name = in.nextLine();
+        System.out.println("Enter The Floor and Room number!");
+        int F = in.nextInt();
+        int I = in.nextInt();
+        System.out.println("CUSTOMER NAME :\t"+name);
+        System.out.println("FLOOR :\t\t"+F);
+        System.out.println("ROOM NUMBER :\t"+I);
+    }
+}
