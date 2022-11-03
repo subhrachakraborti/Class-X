@@ -1,0 +1,16 @@
+import java.util.*;
+public class SecondsConvert
+{
+    public static void main()
+    {
+        Scanner in = new Scanner (System.in);
+        System.out.println("Enter a Number");
+        int n = in.nextInt();
+        int h = n/3600;
+        int hm = n%3600;
+        int m = hm/60;
+        int ms = hm%60;
+        int s = ms;
+        System.out.println(n+" seconds = "+h+" hours "+m+" minutes "+s+" seconds.");
+    }
+}
