@@ -1,0 +1,38 @@
+import java.util.*;
+public class NumDigiSort
+{
+    public static void main()
+    {
+        Scanner in = new Scanner (System.in);
+        System.out.println("Enter a Number");
+        int n = in.nextInt(); 
+        String st = Integer.toString(n);
+        int p = st.length();
+        int m[] = new int[p];
+        int i=0;
+        while(n>0)
+        {
+            m[i] = n%10;
+            n = n/10;
+            i++;
+        }
+        int temp;
+        for(i = 0; i < p-1; i++)
+        {
+            for(int j = 0; j < p-i-1; j++)
+            {
+                if(m[j] > m[j+1])
+                {
+                    temp = m[j];
+                    m[j] = m[j+1];
+                    m[j+1] = temp;
+                }
+            }
+        }
+        System.out.println("The Digits are : ");
+        for(int j=0;j<p;j++)
+        {
+            System.out.print(m[j]+", ");
+        }
+    }
+}
