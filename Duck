@@ -1,0 +1,23 @@
+import java.util.*;
+public class Duck
+{
+    public static void main()
+    {
+        Scanner in = new Scanner (System.in);
+        System.out.println("Enter a Number");
+        int n = in.nextInt();
+        String st = Integer.toString(n);
+        int p = st.length(); int k=0;
+        for(int i=1; i<p; i++)
+        {
+            if(st.charAt(i) == '0')
+            k=1;
+            else
+            continue;
+        }
+        if(k==1)
+        System.out.println("It's a DUCK number");
+        if(k==0)
+        System.out.println("It's not a DUCK number");
+    }
+}
