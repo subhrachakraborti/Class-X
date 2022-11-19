@@ -1,0 +1,40 @@
+import java.util.*;
+public class Discounting
+{
+    int cost;
+    String name;
+    double dc;
+    double amt;
+    void input()
+    {
+        Scanner in = new Scanner (System.in);
+        System.out.println("Enter Name of Customer.");
+        name = in.nextLine();
+        System.out.println("Enter Cost of Article.");
+        cost = in.nextInt();
+    }
+    void cal()
+    {
+        if(cost <=5000)
+        dc = 0;
+        if(cost >5000 && cost<=10000)
+        dc = 10*cost/100;
+        if(cost >10000 && cost<=15000)
+        dc = 15*cost/100;
+        if(cost >15000)
+        dc = 20*cost/100;
+        amt = cost - dc;
+    }
+    void display()
+    {
+        System.out.println("Name of Customer\t\tDiscount\tAmount");
+        System.out.println(name+"\t\t"+dc+"\t"+amt);
+    }
+    public static void main()
+    {
+        Discounting ob = new Discounting();
+        ob.input();
+        ob.cal();
+        ob.display();
+    }
+}
