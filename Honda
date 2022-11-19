@@ -1,0 +1,33 @@
+import java.util.*;
+public class Honda
+{
+    int type;
+    int cost;
+    void gettype()
+    {
+        Scanner in = new Scanner (System.in);
+        System.out.println("Enter No. of Strokes");
+        type = in.nextInt();
+        System.out.println("Enter Previous Cost");
+        cost = in.nextInt();
+    }
+    void find()
+    {
+        if(type == 2)
+        cost += 10*cost/100;
+        if(type == 4)
+        cost += 12*cost/100;
+    }
+    void printcost()
+    {
+        System.out.println("TYPE OF ENGINE\tNEW COST OF VEHICLE");
+        System.out.println(type+" stroke\t"+cost);
+    }
+    public static void main()
+    {
+        Honda ob = new Honda();
+        ob.gettype();
+        ob.find();
+        ob.printcost();
+    }
+}
