@@ -1,0 +1,25 @@
+import java.util.*;
+public class LCM
+{
+    public static void main()
+    {
+        Scanner in = new Scanner (System.in);
+        System.out.println("Enter two Numbers");
+        int a = in.nextInt();
+        int b = in.nextInt();
+        LCM ob = new LCM();
+        int k = ob.Glcm(a,b);
+        System.out.println("LCM = "+(a*b)/k);
+    }
+    int Glcm(int a, int b)
+    {
+        int x = Math.max(a,b);
+        int gcd=0;
+        for(int i=1; i<=x; i++)
+        {
+            if(a%i == 0 && b%i == 0)
+            gcd = i;
+        }
+        return gcd;
+    }
+}
