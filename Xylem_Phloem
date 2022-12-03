@@ -1,0 +1,28 @@
+import java.util.*;
+public class Xylem_Phloem
+{
+    public static void main()
+    {
+        Scanner in = new Scanner (System.in);
+        System.out.println("Enter a Number");
+        int n = in.nextInt();
+        String st = Integer.toString(n);
+        int p = st.length();
+        int m[] = new int[p];
+        for(int i=0; i<p; i++)
+        {
+            m[i] = n%10;
+            n = n/10;
+        }
+        int a = m[0] + m[p-1];
+        int b=0;
+        for(int i=1; i<p-1; i++)
+        {
+            b += m[i];
+        }
+        if(a==b)
+        System.out.println("It's a Xylem Number");
+        else
+        System.out.println("It's a Phloem Number");
+    }
+}
