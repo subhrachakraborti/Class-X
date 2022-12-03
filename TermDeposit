@@ -1,0 +1,37 @@
+import java.util.*;
+public class TermDeposit
+{
+    public static void main()
+    {
+        Scanner in = new Scanner (System.in);
+        System.out.println("Enter the SUM, your AGE and your TERM");
+        int sum = in.nextInt();
+        int age = in.nextInt();
+        int trm = in.nextInt();
+        double ints=0, amt=0;
+        if(age < 60)
+        {
+            if(trm == 1)
+            ints = sum*7.5/100;
+            if(trm == 2)
+            ints = sum*8.5/100;
+            if(trm == 3)
+            ints = sum*9.5/100;
+            else
+            ints = sum*10/100;
+        }
+        if(age >= 60)
+        {
+            if(trm == 1)
+            ints = sum*8/100;
+            if(trm == 2)
+            ints = sum*9/100;
+            if(trm == 3)
+            ints = sum*10/100;
+            else
+            ints = sum*11/100;
+        }
+        System.out.println("Amount Deposited\tTerm\tAge\tInterest Earned\tAmount Paid");
+        System.out.println(sum+"\t"+trm+"\t"+age+"\t"+ints+"\t"+amt);
+    }
+}
