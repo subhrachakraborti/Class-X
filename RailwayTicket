@@ -1,0 +1,46 @@
+import java.util.*;
+public class RailwayTicket
+{
+    String name;
+    String coach;
+    long mob_no;
+    int amt;
+    int totalamt;
+    void accept()
+    {
+        Scanner in = new Scanner (System.in);
+        System.out.println("ENTER NAME : ");
+        name = in.nextLine();
+        System.out.println("ENTER COACH : ");
+        coach = in.next();
+        System.out.println("ENTER MOBILE NO. : ");
+        mob_no = in.nextLong();
+        System.out.println("ENTER AMOUNT : ");
+        amt = in.nextInt();        
+    }
+    void update()
+    {
+        if(coach == "First_AC")
+        totalamt = amt + 700;
+        if(coach == "Second_AC")
+        totalamt = amt + 500;
+        if(coach == "Third_AC")
+        totalamt = amt + 250;
+        if(coach == "Sleeper")
+        totalamt = amt;
+    }
+    void display()
+    {
+        System.out.println("NAME         :"+name);
+        System.out.println("COACH        :"+coach);
+        System.out.println("TOTAL AMOUNT :"+totalamt);
+        System.out.println("MOBILE NO.   :"+mob_no);
+    }
+    public static void main()
+    {
+        RailwayTicket ob = new RailwayTicket();
+        ob.accept();
+        ob.update();
+        ob.display();
+    }
+}
