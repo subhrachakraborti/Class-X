@@ -1,0 +1,35 @@
+import java.util.*;
+public class ParkingLot
+{
+    int vno;
+    int hours;
+    double bill;
+    void input()
+    {
+        Scanner in = new Scanner (System.in);
+        System.out.println("Enter Vehicle No.");
+        vno = in.nextInt();
+        System.out.println("Enter No. of Hours");
+        hours = in.nextInt();
+    }
+    void calculate()
+    {
+        if(hours <= 1)
+        bill = 3.0;
+        if(hours >= 1)
+        bill = 3.0 + 1.50*(hours-1);
+    }
+    void display()
+    {
+        System.out.println("VEHICLE NO.     - "+vno);
+        System.out.println("NO. OF HOURS    - "+hours);
+        System.out.println("BILL            - ₹"+bill);
+    }
+    public static void main()
+    {
+        ParkingLot ob = new ParkingLot();
+        ob.input();
+        ob.calculate();
+        ob.display();
+    }
+}
