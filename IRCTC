@@ -1,0 +1,102 @@
+import java.util.*;
+public class IRCTC
+{
+    public static void main()
+    {
+        Scanner in = new Scanner (System.in);
+        System.out.println("1. Book a Ticket");
+        System.out.println("2. Cancel a Ticket");
+        System.out.println("3. Print a Ticket");
+        System.out.println("Enter Your Choice!");
+        int a = in.nextInt();
+        String src="", dest="";
+        int c=1, x=0;
+        int abc = 1;
+        String name[] = new String[50];
+        int age[] = new int[50];
+        char gender[] = new char[50];
+        do
+        {
+            switch(a)
+            {
+                case 1:
+                    System.out.println("Enter Source");
+                    src = in.nextLine();
+                    System.out.println("Enter Destination");
+                    dest = in.nextLine();
+                    System.out.println("Name\tNo.\tTime\tR.Time\tPrice");
+                    System.out.println("1.Rajdhani\t11012\t12:01\t19:17\t₹1800");
+                    System.out.println("2.Shatabdi\t11210\t04:09\t00:02\t₹2000");
+                    System.out.println("3.Bande Varat\t120522\t06:19\t20:12\t₹2700");
+                    System.out.println("Enter Train");
+                    int b = in.nextInt();
+                    switch(b)
+                    {
+                        case 1:
+                            System.out.println("Enter No. of Tickets");
+                            c = in.nextInt();
+                            for(int i=0; i<c; i++)
+                            {
+                                System.out.println("Enter Name of Passenger "+(i+1));
+                                name[i] = in.next();
+                                System.out.println("Enter Age of Passenger "+(i+1));
+                                age[i] = in.nextInt();
+                                System.out.println("Enter Gender of Passenger "+(i+1));
+                                gender[i] = in.next().charAt(0); 
+                                x = 1800*c;
+                            }
+                            break;
+                        case 2:
+                            System.out.println("Enter No. of Tickets");
+                            c = in.nextInt();
+                            for(int i=0; i<c; i++)
+                            {
+                                System.out.println("Enter Name of Passenger "+(i+1));
+                                name[i] = in.next();
+                                System.out.println("Enter Age of Passenger "+(i+1));
+                                age[i] = in.nextInt();
+                                System.out.println("Enter Gender of Passenger "+(i+1));
+                                gender[i] = in.next().charAt(0); 
+                                x = 2000*c;
+                            }
+                            break;
+                        case 3:
+                            System.out.println("Enter No. of Tickets");
+                            c = in.nextInt();
+                            for(int i=0; i<c; i++)
+                            {
+                                System.out.println("Enter Name of Passenger "+(i+1));
+                                name[i] = in.next();
+                                System.out.println("Enter Age of Passenger "+(i+1));
+                                age[i] = in.nextInt();
+                                System.out.println("Enter Gender of Passenger "+(i+1));
+                                gender[i] = in.next().charAt(0); 
+                                x = 2700*c;
+                            }
+                            break;
+                        default :
+                            System.out.println("Wrong Choice!!!!");
+                    }
+                    break;
+                case 2:
+                    System.out.println("Your Ticket is cancelled!!!");
+                    break;
+                case 3:
+                    System.out.println("***TICKET***");
+                    for(int i=0; i<c; i++)
+                    {
+                        System.out.println("Name    : "+name[i]);
+                        System.out.println("Age     : "+age[i]);
+                        System.out.println("Gender  : "+gender[i]);
+                    }
+                    System.out.println("Total Cost  : ₹"+x);
+                    break;
+                default :
+                    System.out.println("Wrong Choice!");
+                    System.out.println("Enter '1' to start again!");
+                    abc = in.nextInt();
+            }
+        }
+        while(abc==1);
+    }
+}
