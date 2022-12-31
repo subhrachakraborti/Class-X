@@ -1,0 +1,43 @@
+import java.util.*;
+public class Password_Validation
+{
+    public static void main()
+    {
+        Scanner in = new Scanner (System.in);
+        int x = 1;
+        String st;
+        int a, b=0, c=0, d=0, e=0, i;
+        char ch;
+        System.out.println("A PASSWORD MUST CONTAIN A UPPERCASE LETTER, A LOWER CASE LETTER, A DIGIT and A SPECIAL CHARACTER");
+        for(i=0; i<5; i++)
+        {
+            System.out.println("Enter a Password!");
+            st = in.next();
+            a = st.length();
+            if(a >= 8)
+            {
+                System.out.println("Try "+(i+1)+" Exhausted! Wrong Style of Password!");
+                continue;
+            }
+            for(int j=0; j<a; j++)
+            {
+                ch = st.charAt(j);
+                if(Character.isUpperCase(ch))
+                b++;
+                if(Character.isLowerCase(ch))
+                c++;
+                if(Character.isDigit(ch))
+                d++;
+                else
+                e++;
+            }
+            if(b==1 && c==1 && d==1 && e==1)
+            {
+                System.out.println("Password is Validated!");
+                System.exit(0);
+            }
+        }
+        if(i>=5)
+        System.out.println("Your device is Disabled. Too many unsuccesful attempts.");
+    }
+}
