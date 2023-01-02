@@ -1,0 +1,40 @@
+import java.util.*;
+class CheckOvr
+{
+    public static void main()
+    {
+        Scanner in = new Scanner (System.in);
+        CheckOvr ob = new CheckOvr();
+        String s; char c;
+        System.out.println("Enter a word, and a character.");
+        s = in.next();
+        c = in.next().charAt(0);
+        ob.check(s,c);
+        System.out.println("Enter a word");
+        s = in.next();
+        ob.check(s);
+    }
+    void check(String st, char ch)
+    {
+        int k=0;
+        for(int i=0; i<st.length(); i++)
+        {
+            if(Character.toLowerCase(st.charAt(i)) == (Character.toLowerCase(ch)))
+            k++;
+        }
+        System.out.println("Number of "+ch+" in "+st+" = "+k);
+    }
+    void check(String st)
+    {
+        System.out.println("The Vowels are : ");
+        for(int i=0; i<st.length(); i++)
+        {
+            if(Character.toLowerCase(st.charAt(i)) == 'a' ||
+                Character.toLowerCase(st.charAt(i)) == 'e' ||
+                Character.toLowerCase(st.charAt(i)) == 'i' ||
+                Character.toLowerCase(st.charAt(i)) == 'o' ||
+                Character.toLowerCase(st.charAt(i)) == 'u')
+                System.out.print(Character.toLowerCase(st.charAt(i))+" ");
+        }
+    }
+}
