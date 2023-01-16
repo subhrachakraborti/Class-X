@@ -1,0 +1,29 @@
+public class Pattern112
+{
+    public static void main()
+    {
+        for(int i=4, j=1; i>=1 && j<=4; j++, i--)
+        {
+            for(int m=i; m>=1; m--)
+            System.out.print(" ");
+            for(int n=1; n<=j; n++)
+            System.out.print("* ");
+            System.out.print("  ");
+            for(int m=i; m>=1; m--)
+            System.out.print(" ");
+            for(int m=i; m>=1; m--)
+            System.out.print(" ");
+            for(int n=1; n<=j; n++)
+            System.out.print("* ");
+            System.out.println();
+        }
+        for(int i=11, j=1; i>=1 && j<=7; i=i-2, j++)
+        {
+            for(int m=1; m<j; m++)
+            System.out.print("  ");
+            for(int n=i; n>=1; n--)
+            System.out.print("* ");
+            System.out.println();
+        }
+    }
+}
