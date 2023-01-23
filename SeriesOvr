@@ -1,0 +1,31 @@
+import java.util.*;
+public class SeriesOvr
+{
+    double series(double n)
+    {
+        double sum=0;
+        for(int i=1; i<=n; i++)
+        sum = sum + (1/i);
+        return sum;
+    }
+    double series(double a, double n)
+    {
+        double sum =0;
+        for(int i=2, y=1; i<=n && y<=n+3; i+=3, y+=3)
+        sum = sum + y/(Math.pow(a,i));
+        return sum;
+    }
+    public static void main()
+    {
+        Scanner in = new Scanner (System.in);
+        SeriesOvr ob = new SeriesOvr();
+        System.out.println("Enter a digit");
+        double i = in.nextDouble();
+        double k = ob.series(i);
+        System.out.println("The sum is "+k);
+        System.out.println("Enter two digit");
+        double a = in.nextDouble(); double j = in.nextDouble();
+        double l = ob.series(a,j);
+        System.out.println("The sum is "+l);
+    }
+}
