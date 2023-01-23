@@ -1,0 +1,40 @@
+import java.util.*;
+public class StrOvr
+{
+    void display(String str, char ch)
+    {
+        char ch1 = str.charAt(0);
+        char ch2 = str.charAt(str.length()-1);
+        if(ch1 == ch2 && ch1 == ch)
+        System.out.println("Special Words");
+        else
+        System.out.println("No Special Words");
+    }
+    void display(String str1, String str2)
+    {
+        if(str1.equals(str2))
+        System.out.println("Both are Equal");
+        else
+        System.out.println("Both aren't Equal");
+    }
+    void display(String str, int n)
+    {
+        System.out.println(str.charAt(n));
+    }
+    public static void main()
+    {
+        Scanner in = new Scanner (System.in);
+        StrOvr ob = new StrOvr();
+        String st, st1; char ch; int a;
+        System.out.println("Enter A Word and Character");
+        st = in.next(); ch = in.next().charAt(0);
+        ob.display(st, ch);
+        st = "";
+        System.out.println("Enter Two Words");
+        st = in.next(); st1 = in.next();
+        ob.display(st, st1);
+        System.out.println("Enter a Word and the Position");
+        st = in.next(); a = in.nextInt();
+        ob.display(st, (a-1));
+    }
+}
