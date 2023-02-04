@@ -1,0 +1,20 @@
+public class Pattern117
+{
+    public static void main()
+    {
+        int a, i, j, k, n=6, p=6;
+        int m[] = new int[20];
+        m[0] = 1;
+        for(i=0; i<n; i++)
+        {
+            for(k=p; k>=1; k--)
+            System.out.print(" ");
+            for(j=0; j<=i; j++)
+            System.out.print(m[j]+" ");
+            System.out.println();
+            p--;
+            for(a=i+1; a>0; a--)
+            m[a] = m[a] + m[a-1];
+        }
+    }
+}
