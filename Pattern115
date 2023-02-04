@@ -1,0 +1,23 @@
+public class Pattern115
+{
+    public static void main()
+    {
+        for(int i=1, j=4; i<=5 && j>=1; i++, j--)
+        {
+            for(int k=j; k>0; k--)
+            System.out.print("  ");
+            for(int k=1; k<=i; k++)
+            System.out.print("* ");
+            System.out.println();
+        }
+        System.out.println("* * * * *");
+        for(int i=4, y=1; i>=1 && y<=4; i--, y++)
+        {
+            for(int k=1; k<=y; k++)
+            System.out.print("  ");
+            for(int k=i; k>0; k--)
+            System.out.print("* ");
+            System.out.println();
+        }
+    }
+}
