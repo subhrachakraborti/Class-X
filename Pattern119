@@ -1,0 +1,12 @@
+public class Pattern119
+{
+    public static void main()
+    {
+        for(int i=9; i>=1; i-=2)
+        {
+            for(int j=i; j<=9; j+=2)
+            System.out.print(j);
+            System.out.println();
+        }
+    }
+}
