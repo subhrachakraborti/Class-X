@@ -1,0 +1,12 @@
+public class Pattern220
+{
+    public static void main()
+    {
+        String st = "MOMENT";
+        int p = st.length();
+        for(int i=p, j=0; i>0 && j<p; i--, j++)
+        {
+            System.out.println(st.substring(j));
+        }
+    }
+}
