@@ -1,0 +1,19 @@
+public class Pattern121
+{
+    public static void main()
+    {
+        for(int i=1; i<=9; i++)
+        System.out.print("* ");
+        System.out.println();
+        for(int i=4, y=2; i>=1 && y<=14; i--, y+=2)
+        {
+            for(int k=1; k<=i; k++)
+            System.out.print("* ");
+            for(int k=1; k<y; k++)
+            System.out.print("# ");
+            for(int k=1; k<=i; k++)
+            System.out.print("* ");
+            System.out.println();
+        }
+    }
+}
