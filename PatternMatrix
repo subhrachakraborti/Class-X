@@ -1,0 +1,81 @@
+import java.util.*;
+public class PatternMatrix
+{
+    public static void main()
+    {
+        for(int i=5, j=2; i>=1 && j<=5; i--, j++)
+        {
+            for(int k=i; k>=1; k--)
+            {
+                if(j%2 == 0)
+                {
+                    if(k%2 != 0)
+                        System.out.print("1 ");
+                    else
+                        System.out.print("0 ");
+                }
+                else
+                {
+                    if(k%2 != 0)
+                        System.out.print("0 ");
+                    else
+                        System.out.print("1 ");
+                }
+            }
+            for(int k=2; k<j; k++)
+                System.out.print("  ");
+            for(int k=2; k<j; k++)
+                System.out.print("  ");
+            for(int k=i-1; k>=1; k--)
+            {
+                if(j%2 == 0)
+                {
+                    if(k%2 != 0)
+                        System.out.print("1 ");
+                    else
+                        System.out.print("0 ");
+                }
+                else
+                {
+                    if(k%2 == 0)
+                        System.out.print("0 ");
+                    else
+                        System.out.print("1 ");
+                }
+            }
+            System.out.println();
+        }
+        for(int i=5, j=2; i>=1 && j<=5; i--, j++)
+        {
+            for(int k=1; k<=j; k++)
+            {
+                if(k%2 != 0)
+                    System.out.print("1 ");
+                else
+                    System.out.print("0 ");
+            }
+            for(int k=i-1; k>1; k--)
+                System.out.print("  ");
+            for(int k=i-1; k>1; k--)
+                System.out.print("  ");
+            for(int k=2; k<=j; k++)
+            {
+                if(i%2 == 0)
+                {
+                    if(k%2 != 0)
+                    System.out.print("1 ");
+                else
+                    System.out.print("0 ");
+                }
+                else
+                {
+                    if(k%2 == 0)
+                    System.out.print("1 ");
+                else
+                    System.out.print("0 ");
+                }
+            }
+            System.out.println();
+        }
+    }
+}
