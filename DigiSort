@@ -1,0 +1,35 @@
+import java.util.*;
+public class DigiSort
+{
+    public static void main()
+    {
+        Scanner in = new Scanner (System.in);
+        System.out.println("Enter a Number!");
+        int n = in.nextInt();
+        String st = Integer.toString(n);
+        int p = st.length();
+        int m[] = new int[p];
+        int temp=0;
+        for(int i=0; i<p; i++)
+        {
+            m[i] = n%10;
+            n = n/10;
+        } 
+        for(int i = 0; i < p-1; i++)
+        {
+            for(int j = 0; j < p-i-1; j++)
+            {
+                if(m[j] > m[j+1])
+                {
+                    temp = m[j];
+                    m[j] = m[j+1];
+                    m[j+1] = temp;
+                }
+            }
+        }
+        for(int i=0; i<p; i++)
+        {
+            System.out.print(m[i]+", ");
+        }
+    }
+}
