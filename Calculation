@@ -1,0 +1,53 @@
+import java.util.*;
+public class Calculation
+{
+    public static void main()
+    {
+        Scanner in = new Scanner (System.in);
+        Calculation ob = new Calculation();
+        System.out.println("ENTER A NUMBER");
+        int n = in.nextInt();
+        char ch1 = in.next().charAt(0);
+        ob.calculate(n,ch1);
+        System.out.println("ENTER TWO NUMBERS");
+        int x = in.nextInt();
+        int y = in.nextInt();
+        char ch2 = in.next().charAt(0);
+        ob.calculate(x,y,ch2);
+    }
+    void calculate(int m, char ch)
+    {
+        if(ch == 's')
+        {
+            if(m % 7 == 0)
+            System.out.println(m+" is divisible by 7");
+            else
+            System.out.println(m+" is not divisible by 7");
+        }
+        else
+        {
+            String s = Integer.toString(m);
+            if(s.charAt(s.length()-1) == '7')
+            System.out.println(m+" ends with 7");
+            else
+            System.out.println(m+" doesn't end with 7");
+        }
+    }
+    void calculate(int a, int b, char ch)
+    {
+        if(ch == 'g')
+        {
+            if(a > b)
+            System.out.println(a+" is greater than "+b);
+            else
+            System.out.println(b+" is greater than "+a);
+        }
+        else
+        {
+            if(a < b)
+            System.out.println(a+" is smaller than "+b);
+            else
+            System.out.println(b+" is smaller than "+a);
+        }
+    }
+}
