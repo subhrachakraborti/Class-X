@@ -1,0 +1,48 @@
+import java.util.*;
+public class Arrange
+{
+    String str;
+    int i, p;
+    char ch;
+    Arrange()
+    {
+        str = "";
+        i = 0; p = 0;
+        ch = ' ';
+    }
+    void accept()
+    {
+        Scanner in = new Scanner (System.in);
+        System.out.println("ENTER YOUR WORD");
+        str = in.next();
+        p = str.length();
+    }
+    void arrange()
+    {
+        String st = str;
+        str = "";
+        for(i=0; i<p; i++)
+        {
+            int y=0;
+            if(i < p-1)
+            y = i+1;
+            ch = st.charAt(y);
+            if((int)ch >= (int)(st.charAt(i)))
+            str += ch;
+            if((int)ch <= (int)(st.charAt(i)))
+            str = ch + str;
+        }
+    }
+    void display()
+    {
+        System.out.println("THE ALPHABETS IN ASCENDING ORDER");
+        System.out.println(str);
+    }
+    public static void main()
+    {
+        Arrange ob = new Arrange();
+        ob.accept();
+        ob.arrange();
+        ob.display();
+    }
+}
