@@ -1,0 +1,23 @@
+import java.util.*;
+public class WordWithNoVowels
+{
+    public static void main()
+    {
+        Scanner in = new Scanner(System.in);
+        System.out.println("ENTER A WORD");
+        String st = in.next(); String str = "";
+        int p = st.length();
+        for(int i=0; i<p; i++)
+        {
+            if(Character.toUpperCase(st.charAt(i)) == 'A' ||
+                Character.toUpperCase(st.charAt(i)) == 'E' ||
+                Character.toUpperCase(st.charAt(i)) == 'I' ||
+                Character.toUpperCase(st.charAt(i)) == 'O' ||
+                Character.toUpperCase(st.charAt(i)) == 'U')
+                continue;
+            else
+                str += st.charAt(i);
+        }
+        System.out.println("New Word = "+str);
+    }
+}
