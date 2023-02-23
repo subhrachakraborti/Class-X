@@ -1,0 +1,23 @@
+import java.util.*;
+public class SankalpHabit
+{
+    public static void main()
+    {
+        Scanner in = new Scanner (System.in);
+        String st = "", str = ""; int p=0;
+        System.out.println("ENTER YOUR WORD");
+        st = in.next(); p = st.length();
+        if(st.charAt(0) == 'E')
+        {
+            str = st.substring(0,p-2) + "O";
+            System.out.println("New Word = "+str);
+        }
+        else if (st.charAt(0) == 'e')
+        {
+            str = st.substring(0,p-2) + "o";
+            System.out.println("New Word = "+str);
+        }
+        else
+        System.out.println("Sankalp doesn't have habit for this word.");
+    }
+}
